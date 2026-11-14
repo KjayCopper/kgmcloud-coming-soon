@@ -1,0 +1,9 @@
+{
+  "build": { "strategy": "static", "publishDir": "dist" },
+  "ci": {
+    "steps": [
+      { "name": "build", "image": "node:22-alpine", "commands": ["npm ci", "npm run build"] }
+    ]
+  },
+  "deploy": { "type": "static", "site": "kgmcloud", "spa": true }
+}
